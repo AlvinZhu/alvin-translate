@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+src_text="$(xsel -o | tr "\n" " ")"
+kdialog --title Translate --textbox /dev/stdin 450 300 2> /dev/null <<< "$(trans -brief -no-ansi :zh "$src_text")"
